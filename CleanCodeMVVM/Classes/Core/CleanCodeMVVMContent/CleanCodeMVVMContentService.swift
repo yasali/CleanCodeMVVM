@@ -12,7 +12,7 @@ class CleanCodeMVVMContentService: CleanCodeMVVMContentServiceProtocol {
 
 extension CleanCodeMVVMContentService {
     func getSections(completion: @escaping (Result<[Section], Error>) -> Void) {
-        NetworkManager.shared.execute(urlString: "https://content.viaplay.com/ios-se") { (result: Result<SectionResponse, Error>) in
+        NetworkManager.shared.execute(urlString: "https://REPLACE_WITH_VALID_URL") { (result: Result<SectionResponse, Error>) in
             switch result {
             case .success(let response):
                 let sections = response.links.sections
